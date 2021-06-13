@@ -1,0 +1,98 @@
+.ctn-result-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ctn-result-search .ctn-result {
+  margin: 10px;
+  width: 156px;
+  height: 120px;
+  position: relative;
+}
+
+.ctn-result-search .ctn-result::after {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  background: #572EE5;
+  opacity: 0.7;
+  position: absolute;
+  z-index: 2;
+}
+
+.ctn-result-search .ctn-result img {
+  z-index: 5;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.ctn-result-search .ctn-result .ctn-icon {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: auto;
+  top: 10px;
+  right: 10px;
+}
+
+.ctn-result-search .ctn-result .ctn-icon .like, .ctn-result-search .ctn-result .ctn-icon .download, .ctn-result-search .ctn-result .ctn-icon .big {
+  width: 32px;
+  height: 32px;
+}
+
+.ctn-result-search .ctn-result .ctn-icon .like:nth-child(2), .ctn-result-search .ctn-result .ctn-icon .download:nth-child(2), .ctn-result-search .ctn-result .ctn-icon .big:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.ctn-result-search .ctn-result .title-autor, .ctn-result-search .ctn-result .title-gif {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  text-align: left;
+}
+
+.ctn-result-search .ctn-result .title-autor {
+  font-size: 15px;
+  padding: 0 0 40px 10px;
+}
+
+.ctn-result-search .ctn-result .title-gif {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0 0 5px 10px;
+}
+
+@media (min-width: 900px) {
+  .ctn-result-search .ctn-result {
+    margin: 10px;
+    width: 357px;
+    height: 275px;
+  }
+  .ctn-result-search .ctn-result .title-autor {
+    font-size: 15px;
+    padding: 0 0 50px 10px;
+  }
+  .ctn-result-search .ctn-result .title-gif {
+    font-size: 16px;
+    padding: 0 0 15px 10px;
+  }
+}
+/*# sourceMappingURL=style-result.css.map */

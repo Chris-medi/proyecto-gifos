@@ -4,44 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gifos</title>
     <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/section-search.css">
+    <link rel="stylesheet" href="assets/css/style-result.css">
+    <link rel="stylesheet" href="assets/css/slider-trending.css">
+    <link rel="stylesheet" href="assets/css/suger.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/style-big.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+    rel="stylesheet" />
+    <title>Gifos</title>
 </head>
 <body>
     <header>
         <nav>
-            <img src="assets/img/logo-mobile.svg" alt="" class="img-logo">
+            <img src="assets/img/logo-mobile.svg" alt="" class="img-logo" id="img-logo">
             <div class="container-menu">
                 
-                    <input type="checkbox" name="" id="button-menu">
-                    <label for="button-menu" class="button-menu">
-                        <img src="assets/img/close.svg" alt="" class="icon burguer-close">
-                        <img src="assets/img/burger.svg" alt="" class="icon  burguer">
+                <input type="checkbox" name="input" placeholder="Busca GIFOS Y más" id="button-menu" class="button-burguer">
+                <label for="button-menu" class="button-menu">
+                        <img src="assets/img/close.svg" alt="" class="icon burguer-close" id="burguer-close">
+                        <img src="assets/img/burger.svg" alt="" class="icon  burguer" id="burguer">
                     </label>
                     <div class="pages-menu">
-                        <span class="ctn-input-nav">
-                            <input type="search" name="" id="input-nav" class="input-nav">
+                        <span class="ctn-input-nav" id="ctn-input-nav">
+                            <input type="search" name="" id="input-nav" placeholder="Busca GIFOS y más" class="input-nav">
+                            <button class="img-button-nav" onclick=solicitud_api_search(input_search_nav.value)>
+                                <img src="assets/img/icon-search.svg" alt="">
+                            </button>
                         </span>
-                        <span id="modo-dark">
+                        <span id="modo-dark" class="underline letter-nav">
                             Modo Nocturno
-                        </span>
-                        <span class="modo-ligth">
+                        </span >
+                        <span  id="Ligth" class="modo-ligth underline letter-nav">
                             Modo Diurno
                         </span>
-                        <span>Mis Gifos</span>
-                        <span>Mis Favoritos</span>
-                        <span class="crear-gif">
+                        <span class="underline letter-nav">Mis Gifos</span>
+                        <span class="underline letter-nav">Mis Favoritos</span>
+                        <span class="crear-gif destok">
                             <img src="assets/img/button-crear-gifo.svg" alt="" class="create-normal">
                             <img src="assets/img/CTA-crear-gifo-hover.svg" alt="" class="create-hover">
                         </span>
-    
                     </div>
-                
             </div>
-
         </nav>
     </header>
-    
-    <script src="assets/js/"></script>
+
+    <section class="search">
+        <h1 class="title">
+            Inspirate, busca,
+            guadar, y crea los 
+            mejores 
+            <span class="resaltado">
+                GIFOS
+            </span>
+        </h1>
+        <div class="img-input">
+            <img src="assets/img/ilustra_header.svg" alt="Imagen header " class="img-header">
+           <div class="container-input" id="container-input">
+               <input type="search" name="input" placeholder="Busca GIFOS y más" id="input-header" class="input-header">
+               <button class="img-button" id="button-search" >
+                   <img src="assets/img/icon-search.svg" alt="">
+               </button>
+           </div>
+        </div>
+        <div id="ctn-suger" class="ctn-suger"></div>
+        
+
+        <div id="ctn-tendencias" class="ctn-tendencias">
+            <h2 class="title-tendencias">
+                Trending
+            </h2>
+            <p class="tendencias" id="tendent">
+                Reactions, Entertainment, Sports, Stickers, Artists
+            </p>
+        </div>
+        <span class="title-search" id="title-search"></span>
+        <div class="ctn-result-search" id="ctn-result-search"></div>
+        <div class="no-found fx-center" id="no-found">
+            <img src="assets/img/icon-busqueda-sin-resultado.svg" alt="">
+            <h3 class="m-b">Intenta con otra búsqueda.</h3>
+        </div>
+        <button class="button less" id="button-less">Ver menos</button>
+        <button class="button max" id="button-max">Ver más</button>
+
+    </section>
+    <section class="slider-trending">
+        <h2 class="title-slider">
+            Trending GIFOS
+        </h2>
+        <p class="new">
+            Mira los últimos 
+            GIFOS de nuestra comunidad.
+        </p>
+        <div class="container-slider fx" id="container-slider">
+            <div class="ctn-sliders wb" id="ctn-sliders">
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="social-media">
+            <h3 class="share">
+                Compartir en:
+            </h3>
+            <div class="img-social">
+                <div class="facebook">
+                    <img src="assets/img/icon_facebook_noc.svg" alt="" class="noc-facebook">
+                    <img src="assets/img/icon_facebook.svg" alt="" class="normal-facebook">
+                    <img src="assets/img/icon_facebook_hover.svg" alt="" class="hover-facebook">
+                </div>
+                <div class="twitter">
+                    <img src="assets/img/icon_twitter_noc.svg" alt="" class="noc-twitter">
+                    <img src="assets/img/icon-twitter-hover.svg" alt="" class="hover-twitter">
+                    <img src="assets/img/icon-twitter.svg" alt="" class="normal-twitter">
+                </div>
+                <div class="instagram">
+                    <img src="assets/img/icon_facebook_noc.svg" alt="" class="noc-instagram">
+                    <img src="assets/img/icon_instagram-hover.svg" alt="" class="hover-instagram">
+                    <img src="assets/img/icon_instagram.svg" alt="" class="normal-instagram">
+                </div>
+            </div>
+        </div>
+        <span class="autor">
+            © GIFOS 2020 All Rights Reserved.
+        </span>
+    </footer>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/template.js"></script>
+    <script src="assets/js/api-search.js"></script>
+    <script src="assets/js//icon.js"></script>
+    <script src="assets/js/sugerencias.js"></script>
+    <script src="assets/js/modo-dark.js"></script>
+    <script src="assets/js/acciones.js"></script>
+    <script src="assets/js/ver-max.js"></script>
+    <script src="assets/js/slider.js"></script>
 </body>
 </html>

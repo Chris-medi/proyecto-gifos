@@ -1,0 +1,60 @@
+.dark header {
+  background: #37383C;
+}
+
+.dark header nav {
+  border-top-color: black;
+  background: #37383C;
+  background: 37383C;
+}
+
+.dark header nav .container-menu .pages-menu {
+  background: black;
+}
+
+.dark header nav .container-menu .pages-menu input {
+  border-color: #fff;
+}
+
+.dark header nav .container-menu .pages-menu span {
+  color: #fff;
+}
+
+.dark section.search {
+  background: #37383C;
+}
+
+.dark section.search h1 {
+  color: #fff;
+}
+
+.dark section.search .ctn-suger {
+  border-color: #fff;
+}
+
+.dark section.search .ctn-suger span {
+  color: #ffff;
+}
+
+.dark section.search .ctn-tendencias h2, .dark section.search .ctn-tendencias p {
+  color: #fff;
+}
+
+.dark section.slider-trending {
+  background: #222326;
+}
+
+.dark section.slider-trending h2, .dark section.slider-trending p {
+  color: #fff;
+}
+
+.dark footer.footer {
+  background: #37383C;
+  border-bottom-color: #000;
+}
+
+.dark footer.footer .social-media
+h3, .dark footer.footer span {
+  color: #fff;
+}
+/*# sourceMappingURL=dark.css.map */
