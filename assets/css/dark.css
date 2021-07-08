@@ -1,3 +1,7 @@
+.dark {
+  background: #37383C;
+}
+
 .dark header {
   background: #37383C;
 }
@@ -40,12 +44,24 @@
   color: #fff;
 }
 
+.dark section.mis-gifs {
+  background: #37383C;
+}
+
 .dark section.slider-trending {
   background: #222326;
 }
 
 .dark section.slider-trending h2, .dark section.slider-trending p {
   color: #fff;
+}
+
+.dark section.favoritos {
+  background: #37383C;
+}
+
+.dark section.crear-gifs {
+  background: #37383C;
 }
 
 .dark footer.footer {
@@ -56,5 +72,11 @@
 .dark footer.footer .social-media
 h3, .dark footer.footer span {
   color: #fff;
+}
+
+@media (min-width: 900px) {
+  .dark header nav .container-menu .pages-menu {
+    background: #37383C;
+  }
 }
 /*# sourceMappingURL=dark.css.map */

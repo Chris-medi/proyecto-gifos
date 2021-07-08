@@ -1,0 +1,40 @@
+section.mis-gifos {
+  display: none;
+  padding-top: 95px;
+  padding-bottom: 136px;
+  text-align: center;
+}
+
+section.mis-gifos h2 {
+  margin-top: 8px;
+  margin-bottom: 11px;
+  color: #572EE5;
+}
+
+section.mis-gifos .mine {
+  width: 24px;
+}
+
+section.mis-gifos .img-head, section.mis-gifos .img-without {
+  height: auto;
+  margin: auto;
+}
+
+section.mis-gifos .sin-contenidos-mis-gifos p {
+  color: #50E3C2;
+  margin-top: 40px;
+}
+
+section.mis-gifos .sin-contenidos-mis-gifos img {
+  width: 150px;
+  height: 150px;
+}
+
+section.mis-gifos .ctn_upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=misGifos.css.map */

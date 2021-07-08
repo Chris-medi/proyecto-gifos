@@ -1,0 +1,43 @@
+.favoritos {
+  padding-bottom: 137px;
+  padding-top: 95px;
+  margin: auto;
+  display: none;
+}
+
+.favoritos .img-favoritos {
+  width: 28px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 8px;
+}
+
+.favoritos h2 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.favoritos .sin-contenido-favoritos {
+  font-size: 22px;
+  white-space: pre-line;
+  color: #50E3C2;
+}
+
+.favoritos .sin-contenido-favoritos .sin-contenido {
+  margin-top: 110px;
+  margin-bottom: 27px;
+  width: 150px;
+  height: 150px;
+}
+
+.favoritos .favorite-save {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=favoritos.css.map */

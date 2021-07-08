@@ -65,7 +65,31 @@ input_search.addEventListener('input',()=>{
     }
 })
 //
+let _focus = 0;
+input_search.addEventListener('keyup',(e)=>{
+    console.log(e.key);
+    let child_suger = ctn_suger.children;
+    if(_focus > child_suger.length-1){
+        _focus = 0;
+        child_suger[0].style.background = "grey"
+    }
+    if(e.key == "ArrowUp" && child_suger.length > 1 && _focus > 0 ){
+        _focus--
+        child_suger[_focus].style.background = "grey"
+        child_suger[_focus+1].style.background = "#fff";
+        // console.log(child_suger[1])
+        // child_suger[_focus+1].style.background = "#fff";
+    }
+    if(e.key == "ArrowDown" && child_suger.length > 1 && _focus <= 5){
+        _focus++
+        child_suger[_focus].style.background = "grey"
+        child_suger[_focus-1].style.background = "#fff";
+        // child_suger[_focus-1].style.background = "#fff";
+        // console.log(child_suger)
+    }
+    input_search.value = child_suger[_focus].textContent
 
+})
 
 
 

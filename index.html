@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/dark.css">
     <link rel="stylesheet" href="assets/css/style-big.css">
+    <link rel="stylesheet" href="assets/css/favoritos.css">
+    <link rel="stylesheet" href="assets/css/crearGif.css">
+    <link rel="stylesheet" href="assets/css/misGifos.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
@@ -24,14 +27,14 @@
             <img src="assets/img/logo-mobile.svg" alt="" class="img-logo" id="img-logo">
             <div class="container-menu">
                 
-                <input type="checkbox" name="input" placeholder="Busca GIFOS Y más" id="button-menu" class="button-burguer">
+                <input type="checkbox" name="checkbox"  id="button-menu" class="button-burguer">
                 <label for="button-menu" class="button-menu">
                         <img src="assets/img/close.svg" alt="" class="icon burguer-close" id="burguer-close">
                         <img src="assets/img/burger.svg" alt="" class="icon  burguer" id="burguer">
                     </label>
                     <div class="pages-menu">
                         <span class="ctn-input-nav" id="ctn-input-nav">
-                            <input type="search" name="" id="input-nav" placeholder="Busca GIFOS y más" class="input-nav">
+                            <input type="search" name="search" id="input-nav" placeholder="Busca GIFOS y más" class="input-nav">
                             <button class="img-button-nav" onclick=solicitud_api_search(input_search_nav.value)>
                                 <img src="assets/img/icon-search.svg" alt="">
                             </button>
@@ -42,10 +45,10 @@
                         <span  id="Ligth" class="modo-ligth underline letter-nav">
                             Modo Diurno
                         </span>
-                        <span class="underline letter-nav">Mis Gifos</span>
-                        <span class="underline letter-nav">Mis Favoritos</span>
-                        <span class="crear-gif destok">
-                            <img src="assets/img/button-crear-gifo.svg" alt="" class="create-normal">
+                        <span class="underline letter-nav" id="btn-gifs">Mis Gifos</span>
+                        <span class="underline letter-nav" id="btn-favorite">Mis Favoritos</span>
+                        <span class="crear-gif destok " id="btn-crear-gif">
+                            <img src="assets/img/button-crear-gifo.svg" alt="" id="img-crear-gif"  class="create-normal">
                             <img src="assets/img/CTA-crear-gifo-hover.svg" alt="" class="create-hover">
                         </span>
                     </div>
@@ -53,7 +56,8 @@
         </nav>
     </header>
 
-    <section class="search">
+
+    <section class="search" id="search">
         <h1 class="title">
             Inspirate, busca,
             guadar, y crea los 
@@ -65,7 +69,7 @@
         <div class="img-input">
             <img src="assets/img/ilustra_header.svg" alt="Imagen header " class="img-header">
            <div class="container-input" id="container-input">
-               <input type="search" name="input" placeholder="Busca GIFOS y más" id="input-header" class="input-header">
+               <input type="search" autocomplete="off" name="input" placeholder="Busca GIFOS y más" id="input-header" class="input-header">
                <button class="img-button" id="button-search" >
                    <img src="assets/img/icon-search.svg" alt="">
                </button>
@@ -92,6 +96,58 @@
         <button class="button max" id="button-max">Ver más</button>
 
     </section>
+    <section class="favoritos fx-center" id="favoritos">
+        <img src="assets/img/icon-favoritos.svg" alt="" class="img-favoritos">
+        <h2 class="m-b">Favoritos</h2>
+        <div id="cajaFavoritos"></div>
+        <div class="sin-contenido-favoritos fx-center" id="sin-Favorite">
+            <img src="assets/img/icon-fav-sin-contenido.svg" alt="" class="sin-contenido">
+            <h2 class="m-b">"¡Guarda tu primer GIFO en Favoritos
+                para que se muestre aquí!"</h2>
+        </div>
+        <div id="ctn-favoritos-guardados" class="favorite-save "></div>
+    </section>
+    <section class="mis-gifos fx-center" id="mis-gifs">
+        <img src="assets/img/icon-mis-gifos.svg" alt="" class="img-head mine">
+        <h2 class="m-b">Mis GIFOS</h2>
+        <div class="sin-contenidos-mis-gifos fx-center" id="less-ctn-my-gif">
+            <img src="assets/img/icon-mis-gifos-sin-contenido.svg"  class="img-without" alt="">
+            <p class="m-b">¡Anímate a crear tu primer GIFO!</p>
+        </div>
+        <div class="ctn-upload" id="img-upload"></div>
+    </section>
+    <section class="crear-gifs" id="containerCrearGifos">
+        <div class="container-camara">
+            <img src="assets/img/camara.svg" alt="" class="camara">
+            <img src="assets/img/element-luz-camara.svg" alt="" class="luz-camara">
+        </div>
+        <div class="captura-camara" id="captura-video">
+            <div class="video fx-center" id="video_record">
+            </div>
+            <div class="m-b" id="cuadro-title-crear">
+                <h2 class="h2-crear-gif m-b" id="text-title">Aquí podrás
+                    crear tus propios <span class="change">GIFOS </span> </h2>
+                    <p>Crea tu GIFO en sólo 3 pasos!
+                        (sólo necesitas una cámara para grabar un video)
+                    </p>
+            </div>
+
+        </div>
+        <img src="assets/img/pelicula.svg"   alt="" class="cinta">
+        <div class="bottones-next">
+            <div class="number m-b" id="one">1</div>
+            <div class="number m-b" id="two">2</div>
+            <div class="number m-b" id="three">3</div>
+            <span class="m-b time" id="time"></span>
+
+        </div>
+        <div class="advance"></div>
+        <button class="comenzar" id="buttonCrear">COMENZAR</button>
+        <button class="grabar" id="grabar">GRABAR</button>
+        <button class="finalizar" id="finalizar">Finalizar</button>
+        <button class="subir" id="subir">SUBIR GIF</button>
+
+    </section>
     <section class="slider-trending">
         <h2 class="title-slider">
             Trending GIFOS
@@ -101,9 +157,12 @@
             GIFOS de nuestra comunidad.
         </p>
         <div class="container-slider fx" id="container-slider">
+            <img src="assets/img/button-slider-left.svg" alt="" id="slider-left" class="img-slider">
             <div class="ctn-sliders wb" id="ctn-sliders">
-
             </div>
+
+            <img src="assets/img/Button-Slider-right.svg" id="slider-right" alt=""  class="img-slider">
+
         </div>
     </section>
     <footer class="footer">
@@ -142,5 +201,8 @@
     <script src="assets/js/acciones.js"></script>
     <script src="assets/js/ver-max.js"></script>
     <script src="assets/js/slider.js"></script>
+    <script src="assets/js/pages.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="assets/js/create-gif.js"></script>
 </body>
 </html>

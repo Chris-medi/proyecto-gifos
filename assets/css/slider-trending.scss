@@ -35,6 +35,22 @@ $color-title: #ffffff;
         margin-top: 32px;
         margin-bottom: 82px;
         justify-content: center;
+        .ctn-result{
+            animation: slider 3s  1s ease-out;
+        }
+        @keyframes slider {
+            from{
+                animation-delay: 0;
+            }
+            to{
+                animation-delay: 1s;
+            }
+        }
+        .img-slider{
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            display: none;
+        }
         .sliders{
             width: 243px;
             height: 187px;
@@ -109,7 +125,7 @@ $color-title: #ffffff;
 
 //media query para section de slider
 
-@media (min-width: 1200px){
+@media (min-width: 700px){
     .slider-trending{
         .title-slider{
             margin-top: 67px;
@@ -121,6 +137,9 @@ $color-title: #ffffff;
         .container-slider{
             margin-top: 53px;
             margin-bottom: 182px;
+            .img-slider{
+                display: flex;
+            }
             .sliders{
                 width: 357px;
                 height: 275px;

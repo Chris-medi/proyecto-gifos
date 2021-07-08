@@ -57,6 +57,7 @@ const template_big = (objeto)=>{
 
   let fixed = document.createElement('div')
   fixed.className = "fixed"
+  fixed.setAttribute('id',"ampliar")
 
   let div = document.createElement('div');
   div.className = "complet";
@@ -122,3 +123,60 @@ const template_big = (objeto)=>{
   document.body.appendChild(fixed)
 
 }
+
+
+
+const template_gifos_creados = (arrays,destino)=>{
+  
+    arrays.forEach((element, index) => {
+      let ctn_result = document.createElement("div");
+      ctn_result.className = `ctn-result hg${index} `;
+  
+      let img = document.createElement("img");
+      img.src = element.images.fixed_height.url;
+       img.className = `img${index}`
+  
+      let ctn_icon = document.createElement("div");
+      ctn_icon.className = "ctn-icon";
+  
+      let icon_like = document.createElement("img");
+      icon_like.className = "trash";
+      icon_like.setAttribute('id',element.id)
+      icon_like.src = "assets/img/icon-trash-normal.svg";
+      ctn_icon.appendChild(icon_like);
+  
+      let icon_big = document.createElement("img");
+      icon_big.className = "big";
+      icon_big.setAttribute('id',element.id)
+      icon_big.src = "assets/img/icon-max-normal.svg";
+      ctn_icon.appendChild(icon_big);
+  
+      let ctn_down = document.createElement('a');
+      // ctn_icon.className = "icon"
+      ctn_down.href = element.images.downsized.url;
+      ctn_down.download = true;
+      ctn_down.target = "-blank"
+      let icon_down = document.createElement("img");
+      icon_down.className = "download";
+      icon_down.src = "assets/img/icon-download.svg";
+      ctn_down.appendChild(icon_down)
+      ctn_icon.appendChild(ctn_down);
+  
+      let gif = document.createElement("span");
+      gif.className = "title-gif";
+      gif.textContent = element.title;
+      
+      let autor = document.createElement("span");
+      autor.className = "title-autor";
+      autor.textContent = element.username ;
+  
+      ctn_result.appendChild(img);
+      ctn_result.appendChild(ctn_icon);
+      ctn_result.appendChild(autor);
+      ctn_result.appendChild(gif);
+  
+      destino.appendChild(ctn_result);
+    })
+
+}
+

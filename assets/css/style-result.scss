@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
 .ctn-result{
     margin: 10px;
     width: 156px;
@@ -61,10 +62,9 @@
         padding: 0 0 5px 10px ;
     }
 }
-}
 
 @media (min-width:900px) {
-    .ctn-result-search{
+    
     .ctn-result{
         margin: 10px;
         width: 357px;
@@ -78,5 +78,5 @@
             padding: 0 0 15px 10px ;
         }
     }
-    }
+    
 }

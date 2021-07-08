@@ -31,6 +31,7 @@ const solicitud_api_search = (word)=>{
         console.log(response.data)
         if(response.data.length>0){
                 // console.log(response)
+            ctn_suger.innerHTML = ""
             almacenar_gifs_local(response.data)
             array_result = response.data
             let array_slice = response.data.slice(0,12)

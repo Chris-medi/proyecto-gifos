@@ -1,5 +1,5 @@
 let arrray_fav = []
-document.body.addEventListener('click',(e)=>{
+ctn_result_search.addEventListener('click',(e)=>{
     if(e.target.className == "big"){
         let imagenes = llamar_lista_gif()
         let imagen = imagenes[e.target.id]
@@ -12,13 +12,13 @@ document.body.addEventListener('click',(e)=>{
         console.log(e.target.id)
         let id_gif = e.target.id
         let lista_array_gifos = llamar_lista_gif()
-        let save = lista_array_gifos[id_gif]
+        let save =+ lista_array_gifos[id_gif]
         arrray_fav.push(save)
         localStorage.setItem('array-gif-favorite',JSON.stringify(arrray_fav))
     }
 
     if(e.target.className == "close-big"){
-        let elemento_cerrar = document.body.children[7]
+        let elemento_cerrar = document.getElementById('ampliar')
         // console.log(elemento_cerrar)
         document.body.removeChild(elemento_cerrar)
     }
@@ -29,7 +29,7 @@ document.body.addEventListener('click',(e)=>{
 
 
 
-document.body.addEventListener('click',async(e)=>{
+ctn_result_search.addEventListener('click',async(e)=>{
     e.preventDefault()
     if(e.target.className == "download"){
         let img = e.target.parentElement
@@ -44,5 +44,9 @@ document.body.addEventListener('click',async(e)=>{
             a.click();
     }
 })
+
+
+
+
 
 
