@@ -12,7 +12,7 @@ ctn_result_search.addEventListener('click',(e)=>{
         console.log(e.target.id)
         let id_gif = e.target.id
         let lista_array_gifos = llamar_lista_gif()
-        let save =+ lista_array_gifos[id_gif]
+        let save = lista_array_gifos[`${id_gif}`]
         arrray_fav.push(save)
         localStorage.setItem('array-gif-favorite',JSON.stringify(arrray_fav))
     }

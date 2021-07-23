@@ -117,7 +117,7 @@ btn_subir.addEventListener('click', () => {
     cuadro_title.style.display="flex";
     cuadro_title.innerHTML = loading;
     form.append('file', recordblod, 'miGif.gif');
-    const key_api = "HIz3J8JGmxviwwFQBAi9X5WTniL2kSkm";
+    const key_api = "paxbaUAeLHNlziQWgIrcTQkCKymSswzo";
     const url_upload = `https://upload.giphy.com/v1/gifs?api_key=${key_api}`
     fetch(url_upload,{
         method: "POST",

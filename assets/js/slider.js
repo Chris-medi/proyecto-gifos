@@ -4,7 +4,7 @@ const slider_right = document.getElementById('slider-right')
 
 //apenas cargue la pagina se muestra los gifos
 window.addEventListener('load',()=>{
-    const key_api = "HIz3J8JGmxviwwFQBAi9X5WTniL2kSkm";
+    const key_api = "paxbaUAeLHNlziQWgIrcTQkCKymSswzo";
     const url_trending = `https://api.giphy.com/v1/gifs/trending?api_key=${key_api}&limit=10&offset=0&rating=g&lang=es`
     fetch(url_trending)
     .then(res=> res.json())    

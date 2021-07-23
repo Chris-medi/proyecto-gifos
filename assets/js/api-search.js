@@ -21,7 +21,7 @@ const style_hover = ()=>{
 let array_result ;
 const solicitud_api_search = (word)=>{
     ctn_result_search.innerHTML = ""
-    const key_api = "HIz3J8JGmxviwwFQBAi9X5WTniL2kSkm";
+    const key_api = "paxbaUAeLHNlziQWgIrcTQkCKymSswzo";
     const url_search = `https://api.giphy.com/v1/gifs/search?api_key=${key_api}&q=${word}&limit=36&offset=0&rating=g&lang=es`
     fetch(url_search)
     .then(resp => resp.json())

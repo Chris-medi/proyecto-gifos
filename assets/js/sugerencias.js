@@ -25,7 +25,7 @@ const imprimir_suger = (array)=>{
 }
 
 const api_sugerencia = (item)=>{
-    const key_api = "HIz3J8JGmxviwwFQBAi9X5WTniL2kSkm";
+    const key_api = "paxbaUAeLHNlziQWgIrcTQkCKymSswzo";
     fetch(`https://api.giphy.com/v1/gifs/search/tags?api_key=${key_api}&q=${item}&limit=5`)
     .then(res=> res.json())
     .then(response =>{
@@ -115,7 +115,10 @@ const eliminar_icon_close = ()=>{
 
 ctn_suger.addEventListener('click',(e)=>{
     if(e.target.className =="suger"){
+//--------------click en la suger se dispara el evento-----
         input_search.value = e.target.textContent
+        solicitud_api_search(input_search.value)
+
     }
 })
 
@@ -131,3 +134,6 @@ document.body.addEventListener('click',(e)=>{
         eliminar_icon_close();
     }
 })
+
+
+
